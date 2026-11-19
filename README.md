@@ -2,7 +2,7 @@
 
 A phone-first walk log for Donna, my leash-reactive black Lab. I tap once to log a reaction (what set her off, how close it was, how big it got), a pee or a poo with a quality score. The app tracks the route and distance and shows whether training is working.
 
-**Try it with sample data:** open the deployed site with `?demo` on the end of the URL.
+**Live:** [donna-walks.vercel.app](https://donna-walks.vercel.app) · **With sample data:** [donna-walks.vercel.app/?demo](https://donna-walks.vercel.app/?demo)
 
 ## Why I built it
 
