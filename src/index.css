@@ -360,3 +360,9 @@ details.table-view td, details.table-view th { text-align: left; padding: 4px 0;
 details.table-view th { color: var(--md-on-surface-variant); }
 
 .callout { border-radius: 12px; padding: 12px 16px; background: var(--md-surface-container-high); }
+
+/* Keyboard focus: a clear ring everywhere, and a skip link to the content */
+:focus-visible { outline: 3px solid var(--md-primary); outline-offset: 2px; }
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 50; background: var(--md-surface, #fff); color: var(--md-on-surface, #1a1c16); padding: 8px 12px; font-weight: 600; }
+.skip:focus { left: 8px; }
+main:focus { outline: none; }

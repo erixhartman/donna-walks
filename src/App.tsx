@@ -67,15 +67,16 @@ export default function App() {
 
   return (
     <div className="app">
+      <a className="skip" href="#main" onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus() }}>Skip to content</a>
       {isDemo && (
-        <div className="demo-banner body-m">
+        <div className="demo-banner body-m" role="region" aria-label="Demo mode">
           <Icon name="science" size={18} />
           <span>Demo mode: sample data</span>
           <button className="btn text" style={{ color: 'inherit', height: 32 }} onClick={() => setDemoMode(false)}>Exit</button>
         </div>
       )}
-      {screen}
-      <nav className="nav-bar">
+      <main id="main" tabIndex={-1}>{screen}</main>
+      <nav className="nav-bar" aria-label="Sections">
         <div className="inner">
           {TABS.map((t) => (
             <button key={t.hash} className="nav-item" aria-current={tab === t.hash ? 'page' : undefined} onClick={() => navigate(t.hash)}>
